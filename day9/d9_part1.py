@@ -47,5 +47,3 @@ def filesystem_checksum(filesystem : list[str]) -> int:
 
 # print(expand_block())
 print("part 1: ", filesystem_checksum(move_file_blocks(list(expand_block()))))
-
-# print("part 2: ", get_calibration_result_new())
