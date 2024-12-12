@@ -1,4 +1,5 @@
 import sys
+from functools import lru_cache
 
 with open(sys.argv[1], 'r') as file:
 	stones : list[int] = [int(num) for num in file.readline().split()]
@@ -22,8 +23,6 @@ def multi_blink(stones : list[int], n : int) -> list[int]:
 		stones = blink(stones)
 	return stones
 
-blink_dict = {}
-
 print("part 1: ", len(multi_blink(stones, 25)))
-# print("part 1: ", len(multi_blink(stones, 75)))
+print("part 2: ", len(multi_blink(stones, 75)))
 
